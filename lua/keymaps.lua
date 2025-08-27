@@ -12,7 +12,7 @@ vim.keymap.set("n", "<C-q>", ":q<CR>", { desc = "Quit" })
 
 -- Run current C file with clang
 vim.keymap.set("n", "<F9>", function()
-  vim.cmd("!clang % -o %:r && ./%:r")
+  vim.cmd("!gcc % -o %:r && ./%:r")
 end, { desc = "Compile & run C file" })
 
 -- Run Python file

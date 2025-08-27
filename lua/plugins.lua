@@ -8,6 +8,7 @@ return require("packer").startup(function(use)
     requires = { "nvim-tree/nvim-web-devicons", opt = true }
   }
 
+
   -- Treesitter
   use {
     "nvim-treesitter/nvim-treesitter",
@@ -15,9 +16,10 @@ return require("packer").startup(function(use)
   }
 
   -- Telescope
+  use "nvim-lua/plenary.nvim"
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.8',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    "nvim-telescope/telescope.nvim",
+    requires = { "nvim-lua/plenary.nvim" }
   }
 
   -- LSP
@@ -27,7 +29,18 @@ return require("packer").startup(function(use)
   use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-nvim-lsp"
 
-  -- Snippets
-  use "L3MON4D3/LuaSnip"
+  -- Snippets 
+  use "saadparwaiz1/cmp_luasnip"
+  use "hrsh7th/cmp-buffer"
+  use "hrsh7th/cmp-path"
+
+  -- Autopairs
+  use "windwp/nvim-autopairs"
+
+  use {
+    "L3MON4D3/LuaSnip",
+    requires = { "rafamadriz/friendly-snippets" },
+    run = "make install_jsregexp"  -- <- installs jsregexp
+  }
 end)
 

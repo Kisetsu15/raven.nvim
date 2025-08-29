@@ -11,3 +11,9 @@ vim.api.nvim_create_autocmd("VimEnter", {
     end
   end,
 })
+
+-- Indentation
+vim.opt.tabstop = 4        -- Number of spaces that a <Tab> counts for
+vim.opt.shiftwidth = 4     -- Number of spaces used for each step of (auto)indent
+vim.opt.expandtab = true   -- Convert tabs to spaces
+vim.opt.smartindent = true -- Smarter autoindenting

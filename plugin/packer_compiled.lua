@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\MyPC\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  harpoon = {
+    loaded = true,
+    path = "C:\\Users\\MyPC\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\harpoon",
+    url = "https://github.com/theprimeagen/harpoon"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "C:\\Users\\MyPC\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lualine.nvim",

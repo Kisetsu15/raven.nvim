@@ -1,6 +1,5 @@
 require("nvim-autopairs").setup {}
 
--- If you want it to integrate with nvim-cmp:
 local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 local cmp = require("cmp")
 

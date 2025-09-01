@@ -105,6 +105,7 @@ _G.packer_plugins = {
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
   harpoon = {
+    config = { "\27LJ\2\n5\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\26raven.plugins.harpoon\frequire\0" },
     loaded = true,
     path = "C:\\Users\\MyPC\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\harpoon",
     url = "https://github.com/theprimeagen/harpoon"
@@ -129,6 +130,12 @@ _G.packer_plugins = {
     path = "C:\\Users\\MyPC\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-tree.lua"] = {
+    config = { "\27LJ\2\n§\1\0\0\6\0\n\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\0016\0\3\0009\0\4\0009\0\5\0'\2\6\0'\3\a\0'\4\b\0005\5\t\0B\0\5\1K\0\1\0\1\0\1\tdesc\21Toggle file tree\28<cmd>NvimTreeToggle<cr>\14<leader>.\6n\bset\vkeymap\bvim\nsetup\14nvim-tree\frequire\0" },
+    loaded = true,
+    path = "C:\\Users\\MyPC\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-tree.lua",
+    url = "https://github.com/nvim-tree/nvim-tree.lua"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "C:\\Users\\MyPC\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter",
@@ -151,6 +158,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["telescope.nvim"] = {
+    config = { "\27LJ\2\n7\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\28raven.plugins.telescope\frequire\0" },
     loaded = true,
     path = "C:\\Users\\MyPC\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
@@ -159,10 +167,27 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\MyPC\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
+  },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "C:\\Users\\MyPC\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: harpoon
+time([[Config for harpoon]], true)
+try_loadstring("\27LJ\2\n5\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\26raven.plugins.harpoon\frequire\0", "config", "harpoon")
+time([[Config for harpoon]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+try_loadstring("\27LJ\2\n§\1\0\0\6\0\n\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\0016\0\3\0009\0\4\0009\0\5\0'\2\6\0'\3\a\0'\4\b\0005\5\t\0B\0\5\1K\0\1\0\1\0\1\tdesc\21Toggle file tree\28<cmd>NvimTreeToggle<cr>\14<leader>.\6n\bset\vkeymap\bvim\nsetup\14nvim-tree\frequire\0", "config", "nvim-tree.lua")
+time([[Config for nvim-tree.lua]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+try_loadstring("\27LJ\2\n7\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\28raven.plugins.telescope\frequire\0", "config", "telescope.nvim")
+time([[Config for telescope.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

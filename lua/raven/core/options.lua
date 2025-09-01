@@ -28,6 +28,8 @@ vim.opt.incsearch = true
 
 vim.opt.wrap = false
 
+vim.opt.fillchars:append({ eob = " " })
+
 vim.opt.clipboard = "unnamedplus"
 
 vim.opt.termguicolors = true

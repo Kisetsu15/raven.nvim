@@ -1,20 +1,17 @@
 return require("packer").startup(function(use)
     use ("wbthomason/packer.nvim")
 
-    -- UI
     use ("folke/tokyonight.nvim")
     use {
         "nvim-lualine/lualine.nvim",
         requires = { "nvim-tree/nvim-web-devicons", opt = true }
     }
 
-    -- Treesitter
     use {
         "nvim-treesitter/nvim-treesitter",
         run = ":TSUpdate"
     }
 
-    -- Telescope
     use ("nvim-lua/plenary.nvim")
     use {
         "nvim-telescope/telescope.nvim",
@@ -30,19 +27,16 @@ return require("packer").startup(function(use)
         end
     }
 
-    -- LSP
     use ("neovim/nvim-lspconfig")
 
-    -- Completion
     use ("hrsh7th/nvim-cmp")
     use ("hrsh7th/cmp-nvim-lsp")
 
-    -- Snippets 
     use ("saadparwaiz1/cmp_luasnip")
     use ("hrsh7th/cmp-buffer")
     use ("hrsh7th/cmp-path")
 
-    -- Autopairs
+
     use ("windwp/nvim-autopairs")
 
     use {
@@ -53,15 +47,31 @@ return require("packer").startup(function(use)
 
     use {
         "tpope/vim-fugitive",
-        vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+        config = function ()
+            vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+        end
     }
 
     use {
         "nvim-tree/nvim-tree.lua",
         requires = "nvim-tree/nvim-web-devicons",
         config = function()
-            require("nvim-tree").setup {}
-            vim.keymap.set("n", "<leader>.", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle file tree" })
+            require("raven.plugins.nvim-tree")
+        end
+    }
+
+    use {
+        "mbbill/undotree",
+        config = function()
+            vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+        end
+    }
+
+    use {
+        "goolord/alpha-nvim",
+        requires = { "nvim-tree/nvim-web-devicons" },
+        config = function()
+            require("raven.plugins.alpha-nvim")
         end
     }
 

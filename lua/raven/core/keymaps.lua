@@ -1,5 +1,3 @@
-vim.keymap.set("n","<leader>.", vim.cmd.Ex, { desc = "Open file explorer" })
-
 vim.keymap.set("n", "<C-s>", ":w<CR>", { desc = "Save file" })
 vim.keymap.set("i", "<C-s>", "<Esc>:w<CR>a", { desc = "Save file (insert mode)" })
 
@@ -28,8 +26,8 @@ vim.keymap.set("v", "<C-v>", '"+p', { noremap = true, desc = "Paste" })
 vim.keymap.set("n", "<C-a>", "ggVG", { noremap = true, desc = "Select all" })
 vim.keymap.set("i", "<C-a>", "<Esc>ggVG", { noremap = true, desc = "Select all" })
 
-vim.keymap.set("n", "<A-Up>", ":m .+1<CR>==", { noremap = true, silent = true })
-vim.keymap.set("n", "<A-Down>", ":m .-2<CR>==", { noremap = true, silent = true })
+vim.keymap.set("n", "<A-Down>", ":m .+1<CR>==", { noremap = true, silent = true })
+vim.keymap.set("n", "<A-Up>", ":m .-2<CR>==", { noremap = true, silent = true })
 
 vim.keymap.set("v", "<A-Down>", ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
 vim.keymap.set("v", "<A-Up>", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })

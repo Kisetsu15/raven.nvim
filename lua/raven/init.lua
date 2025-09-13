@@ -1,7 +1,5 @@
 vim.cmd [[packadd packer.nvim]]
 
-vim.env.VIMRUNTIME = "C:\\Program Files\\Neovim\\share\\nvim\\runtime"
-
 require("raven.plugins.packer")
 require("raven.plugins.ui")
 require("raven.plugins.treesitter")

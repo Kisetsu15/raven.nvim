@@ -7,6 +7,13 @@ vim.api.nvim_create_autocmd("VimEnter", {
     if vim.fn.argc() == 0 then
       require("alpha").start(true)
     end
+    if vim.fn.argc() == 1 then
+      local stat = vim.loop.fs_stat(vim.fn.argv(0))
+      if stat and stat.type == "directory" then
+        vim.cmd.cd(vim.fn.argv(0))
+        vim.cmd.Ex()
+      end
+    end
   end,
 })
 
